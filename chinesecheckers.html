@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>YMportfolio-Skills</title>
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h2 class="logo">YULIIA MELNYK</h2>
+      <input type="checkbox" id="side-menu" />
+      <label class="unchecked" for="side-menu"
+        ><span class="fas fa-bars"></span
+      ></label>
+      <hr id="nav-hr" />
+      <nav class="nav">
+        <ul class="menu">
+          <li><a href="index.html" class="about">About Me</a></li>
+          <li><a href="skills.html" class="specialities">My Skills</a></li>
+          <li><a href="projects.html" class="projects">My Projects</a></li>
+          <li>
+            <a href="contact.html" class="contacts">Contact information</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="project-text">
+        <h2>Chinese Checkers multiplayer</h2>
+        <article>
+          The game is built on Java Threads that allows to create a separate
+          view for every player and show on game screen all the moves the other
+          players made. The game shows you available moves for each piece that
+          has been clicked. The game allows to create new rooms and join room by
+          its name. It also allows you to choose the side of the board you will
+          play on.
+        </article>
+        <p>
+          This is the code snippet that shows connection to the server using
+          Java Socket and checks if port is active
+        </p>
+      </section>
+      <section class="project-code">
+        <pre>
+            <code>
+    protected void connectServerClicked(MouseEvent event) {
+        button = (Button) event.getSource();
+        try {
+            Ip = IpField.getText();
+            port = Integer.parseInt(PortField.getText());
+            connect();
+        } catch (Exception e) {
+            SceneContentHandler.SetLabelVisible(connectionErrorLabel);
+            connectionError = true;
+            return;
+        }
+
+        if (!connectionError) {
+
+            switch (greetingsChoice) {
+                case 1 -> client.sendMessageToServer("CREATE");
+                case 2 -> client.sendMessageToServer("JOIN");
+            }
+        }
+
+    }
+            </code>
+        </pre>
+      </section>
+      <a href="#">
+        <button class="github-button">
+          <strong>Check This Project At GitHub</strong>
+        </button>
+      </a>
+    </main>
+
+    <footer>
+      <a href="contact.html">Contact Me</a>
+    </footer>
+  </body>
+</html>

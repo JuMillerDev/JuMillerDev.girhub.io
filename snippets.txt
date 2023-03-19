@@ -1,0 +1,8 @@
+HTML
+
+link : <a href="https://www.w3schools.com">This is a link</a>
+img : <img src="w3schools.jpg" alt="W3Schools.com" width="104" height="142">
+line break : <br>
+language of page : <html lang="en">
+displays title when hovered over text : <p title="I'm a tooltip">This is a paragraph.</p>
+horizontal line: <hr>
