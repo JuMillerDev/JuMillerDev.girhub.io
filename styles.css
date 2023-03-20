@@ -438,20 +438,20 @@ ul {
   }
   
   .portrait-photo {
-    max-width: 40vw;
-    max-height: 40vw;
+    max-width: 35vw;
+    max-height: 35vw;
   }
   
   #photo-intro-section {
     margin:2vw;
-    padding: 2vw 3vw 2vw 3vw;
+    padding: 1.5vw 2vw 1.5vw 2vw;
   }
   
   #photo-intro-text {
     /*width: 50vw;*/
-    padding-left: 2%;
+    padding-left: 4%;
     padding-right: 2%;
-    font-size: 3vw;
+    font-size: 2.7vw;
   }
 
   .information-section {
@@ -461,58 +461,34 @@ ul {
   }
   
   .information-section h2 {
-    margin: 0;
     font-size: 4vw;
-    font-family: Futura-Thin;
   }
   
   .information-section p {
-    font-family: Roboto-Light;
-    text-align: justify;
-    font-size: medium;
     font-size: 3vw;
   }
   
   .link-section {
-    background-color: rgba(0, 0, 0, 0.79);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-left: 2vw;
-    padding-right: 2vw;
-    margin: 0;
+    height: fit-content;
+    margin: 0 3vw 0 3vw;
   }
   
   .link-section h5 {
-    margin-left: 2vw;
-    margin-right: 2vw;
-    margin-top: 0;
-    padding-top: 5vw;
-    margin-bottom: 0;
-    color: rgba(238, 237, 237, 0.955);
-    text-align: center;
-    font-family: Futura-Thin;
-    font-weight: 900;
-    font-size: 3.5vw;
+    font-weight: 800;
+    font-size: 2.7vw;
   }
   
   .link-button {
-    width: fit-content;
-    height: fit-content;
-    font-size: 3.5vw;
-    margin-top: 5vw;
-    margin-bottom: 5vw;
-    padding-left: 5vw;
-    padding-right: 5vw;
-    padding-top: 1vw;
-    padding-bottom: 1vw;
-    border: 0.4vw solid #f0f2b3;
+
+    font-size: 2.5vw;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
+    border: 0.3vw solid #f0f2b3;
     color: #f0f2b3;
     background-color: transparent;
     border-radius: 2vw;
     font-family: Futura-Thin;
-    font-weight: 900;
+    font-weight: 800;
   }
   
   .link-button:hover {
@@ -520,13 +496,14 @@ ul {
   }
   
   .article-img {
-    height: 35vw;
-    width: 100vw;
-    margin: 0;
+    height: 29vw;
+    width: 94vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
   }
   
   .contact-container {
-    height: 10vh;
+    height: 6vh;
     /*width: 90vw;*/
     background-color: rgba(0, 0, 0, 0.837);
     font-size: 5vw;
