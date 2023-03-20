@@ -454,6 +454,10 @@ ul {
     font-size: 2.7vw;
   }
 
+  #side-menu:checked ~ nav {
+    max-height: 28vw;
+  }
+
   .information-section {
     padding: 2vw 3vw 2vw 3vw;
   
@@ -469,7 +473,7 @@ ul {
   }
   
   .link-section {
-    height: fit-content;
+    height: 22vw;
     margin: 0 3vw 0 3vw;
   }
   
@@ -480,19 +484,10 @@ ul {
   
   .link-button {
 
-    font-size: 2.5vw;
+    font-size: 2.7vw;
     padding-top: 0.5vw;
     padding-bottom: 0.5vw;
-    border: 0.3vw solid #f0f2b3;
-    color: #f0f2b3;
-    background-color: transparent;
-    border-radius: 2vw;
-    font-family: Futura-Thin;
     font-weight: 800;
-  }
-  
-  .link-button:hover {
-    background-color: #f0f2b3;
   }
   
   .article-img {
@@ -504,10 +499,11 @@ ul {
   
   .contact-container {
     height: 6vh;
-    /*width: 90vw;*/
+    width: 70vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
     background-color: rgba(0, 0, 0, 0.837);
-    font-size: 5vw;
-    margin: 5vw;
+    font-size: 3vw;
     display: flex;
     align-items: center;
     justify-content: center;
