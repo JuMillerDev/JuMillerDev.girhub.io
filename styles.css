@@ -504,6 +504,7 @@ ul {
     margin-right: 10vw;
     font-size: 3vw;
     background-color: rgba(0, 0, 0, 0.79);
+    box-shadow: none;
   }
   
   .contact-container i {
