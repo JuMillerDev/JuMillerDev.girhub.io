@@ -137,12 +137,13 @@ ul {
 .portrait-photo {
   max-width: 50vw;
   max-height: 50vw;
-  vertical-align: middle;
 }
 
 #photo-intro-section {
   display: inline-flex;
   background-color: #f0f2b3;
+  display: flex;
+  align-items: center;
   margin: 0;
   padding: 0;
 }
