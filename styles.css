@@ -517,25 +517,12 @@ ul {
   }
   
   .skills-name {
-    text-align: right;
-    font-family: Futura-Thin;
-    padding-right: 10vw;
-    font-size: 6.5vw;
-    font-weight: 600;
+    font-size: 4vw;
   }
   
   .skills-item {
     width: 90%;
-    font-size: 5vw;
-    font-weight: 600;
-    font-family: Futura-Thin;
-  }
-  
-  .skill {
-    display: block;
-    justify-content: space-between;
-    padding-left: 10vw;
-    padding-right: 10vw;
+    font-size: 3vw;
   }
   
   .container {
@@ -544,82 +531,45 @@ ul {
   }
   
   .skills-scale {
-    padding-top: 3vw;
-    padding-bottom: 3vw;
-    border-color: #1e2021;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
   }
   
   .cpp {
-    box-sizing: border-box;
-    padding-right: 5vw;
-    width: 70%;
-    background-color: #e2cb3ad0;
-    text-align: end;
-    color: rgba(0, 0, 0, 0.533);
-    font-weight: 700;
-    font-size: 5vw;
-    font-family: Roboto-Light;
+    font-size: 3vw;
   }
   
   .html {
-    box-sizing: border-box;
-    padding-right: 5vw;
-    width: 50%;
-    background-color: #e2cb3ad0;
-    text-align: end;
-    color: rgba(0, 0, 0, 0.533);
-    font-weight: 700;
-    font-size: 5vw;
-    font-family: Roboto-Light;
+    font-size: 3vw;
   }
   
   .python {
-    box-sizing: border-box;
-    padding-right: 5vw;
-    width: 80%;
-    background-color: #e2cb3ad0;
-    text-align: end;
-    color: rgba(0, 0, 0, 0.533);
-    font-weight: 700;
-    font-size: 5vw;
-    font-family: Roboto-Light;
+    font-size: 3vw;
   }
   
   .skill-list {
-    list-style: circle;
-    float: right;
-    background-color: #ddd;
-    margin-bottom: 5vh;
+    margin-bottom: 3vh;
   }
   
   .skill-list li {
-    font-size: 4.5vw;
-    font-family: Roboto-Light;
+    font-size: 2.7vw;
   }
-  
-  .project{
-    display: flex;
-    flex-direction: column;
-  }
-  
+
   .project h3 {
-    padding-left: 5vw;
-    padding-right: 5vw;
-    font-size: 5vw;
-    font-family: Futura-Thin;
+    font-size: 3.7vw;
   }
   
   .project article {
     padding-left: 5vw;
     padding-right: 5vw;
-    font-size: 4.5vw;
+    font-size: 2.7vw;
     font-family: Roboto-Light;
   }
   
   .project-text {
     padding-left: 5vw;
     padding-right: 5vw;
-    font-size: 4.3vw;
+    font-size: 3vw;
     font-family: Roboto-Light;
     font-weight: 500;
   }
