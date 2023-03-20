@@ -104,7 +104,7 @@ input[type='checkbox'] {
   display: block;
   color: whitesmoke;
   font-size: 5.5vw;
-  line-height: 7.6vw;
+  line-height: 9vw;
 }
 
 .menu a:hover {
@@ -126,7 +126,7 @@ ul {
 }
 
 #side-menu:checked ~ nav {
-  max-height: 40vw;
+  max-height: 45vw;
   display: block;
 }
 
