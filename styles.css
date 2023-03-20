@@ -186,7 +186,10 @@ ul {
 
 .link-section {
   background-color: rgba(0, 0, 0, 0.79);
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding-left: 2vw;
   padding-right: 2vw;
   margin: 0;
@@ -206,13 +209,16 @@ ul {
 }
 
 .link-button {
-  width: 25vw;
-  height: 8vw;
+  width: fit-content;
+  height: fit-content;
   font-size: 3.5vw;
-  margin-left: 37vw;
   margin-top: 5vw;
   margin-bottom: 5vw;
-  border: 2px solid #f0f2b3;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  padding-top: 1vw;
+  padding-bottom: 1vw;
+  border: 0.4vw solid #f0f2b3;
   color: #f0f2b3;
   background-color: transparent;
   border-radius: 2vw;
@@ -329,6 +335,11 @@ ul {
   font-family: Roboto-Light;
 }
 
+.project{
+  display: flex;
+  flex-direction: column;
+}
+
 .project h3 {
   padding-left: 5vw;
   padding-right: 5vw;
@@ -378,12 +389,17 @@ ul {
   font-size: 3.2vw;
 }
 
+.learn-more {
+  display:flex;
+  justify-content: center;
+}
+
 .learn-more button{
   color: rgba(0, 0, 0, 0.79);
   border-color: rgba(0, 0, 0, 0.79);
 }
 
-@media only screen and (min-width: 600px) and (orientation: landscape) {
+/* @media only screen and (min-width: 600px) and (orientation: landscape) {
   body {
     background-color: #f0f2b3;
   }
@@ -393,4 +409,4 @@ ul {
   body {
     background-color: #1e2021;
   }
-}
+} */
