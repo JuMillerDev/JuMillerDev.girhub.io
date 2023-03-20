@@ -503,6 +503,7 @@ ul {
     margin-left: 10vw;
     margin-right: 10vw;
     font-size: 3vw;
+    background-color: rgba(0, 0, 0, 0.79);
   }
   
   .contact-container i {
@@ -574,7 +575,7 @@ ul {
   }
   
   .github-button {
-    width: 37vw;
+    width: 40vw;
     height: 6vw;
     margin-left: 31.5vw;
     margin-right: 31.5vw;
