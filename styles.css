@@ -137,6 +137,7 @@ ul {
 .portrait-photo {
   max-width: 50vw;
   max-height: 50vw;
+  vertical-align: middle;
 }
 
 #photo-intro-section {
