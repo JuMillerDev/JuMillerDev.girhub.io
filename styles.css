@@ -499,17 +499,10 @@ ul {
   
   .contact-container {
     height: 6vh;
-    width: 70vw;
-    margin-left: 15vw;
-    margin-right: 15vw;
-    background-color: rgba(0, 0, 0, 0.837);
+    width: 80vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
     font-size: 3vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #eef272f5;
-    font-family: Roboto-Bold;
-    box-shadow: 1px 1px 1px 1px gray;
   }
   
   .contact-container i {
