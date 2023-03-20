@@ -8,6 +8,16 @@
   src: url('fonts/Roboto-Bold.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: 'Futura-Thin';
+  src: url('fonts/Futura Book font.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Merriweather-Light';
+  src: url('fonts/Merriweather Light.ttf');
+}
+
 body {
   margin: 0%;
   padding: 0%;
@@ -141,6 +151,7 @@ ul {
   padding-right: 2%;
   display: block;
   font-size: 4vw;
+  font-family: Futura-Thin;
 }
 
 .about-page ~ .about {
@@ -160,9 +171,11 @@ ul {
 .information-section h2 {
   margin: 0;
   font-size: 6vw;
+  font-family: Futura-Thin;
 }
 
 .information-section p {
+  font-family: Roboto-Light;
   text-align: justify;
   font-size: medium;
   font-size: 4vw;
@@ -184,7 +197,7 @@ ul {
   margin-bottom: 0;
   color: rgba(238, 237, 237, 0.955);
   text-align: center;
-  font-family: Roboto-Light;
+  font-family: Futura-Thin;
   font-weight: 900;
   font-size: 3.5vw;
 }
@@ -196,9 +209,11 @@ ul {
   margin-left: 37vw;
   margin-top: 5vw;
   margin-bottom: 5vw;
-  border-color: #f4f6c6;
-  background-color: #f0f2b3;
-  font-family: Roboto-Bold;
+  border: 2px solid #f0f2b3;
+  color: #f0f2b3;
+  background-color: transparent;
+  border-radius: 2vw;
+  font-family: Futura-Thin;
   font-weight: 900;
 }
 
@@ -232,6 +247,7 @@ ul {
 
 .skills-name {
   text-align: right;
+  font-family: Futura-Thin;
   padding-right: 10vw;
   font-size: 6.5vw;
   font-weight: 600;
@@ -241,6 +257,7 @@ ul {
   width: 90%;
   font-size: 5vw;
   font-weight: 600;
+  font-family: Futura-Thin;
 }
 
 .skill {
@@ -306,24 +323,33 @@ ul {
 
 .skill-list li {
   font-size: 4.5vw;
+  font-family: Roboto-Light;
 }
 
 .project h3 {
   padding-left: 5vw;
   padding-right: 5vw;
   font-size: 5vw;
+  font-family: Futura-Thin;
 }
 
 .project article {
   padding-left: 5vw;
   padding-right: 5vw;
   font-size: 4.5vw;
+  font-family: Roboto-Light;
 }
 
 .project-text {
   padding-left: 5vw;
   padding-right: 5vw;
   font-size: 4.3vw;
+  font-family: Roboto-Light;
+  font-weight: 500;
+}
+
+.project-text h2 {
+  font-family: Futura-Thin;
 }
 
 .project-code {
@@ -341,9 +367,17 @@ ul {
   margin-left: 25vw;
   margin-right: 25vw;
   margin-bottom: 5vw;
-  background-color: #e2cb3ad0;
-  border-color: #f0f2b3;
+  font-family: Futura-Thin;
+  border-radius: 15px;
+  background-color: transparent;
+  border-color: rgba(0, 0, 0, 0.79);
+  color: rgba(0, 0, 0, 0.79);
   font-size: 3.2vw;
+}
+
+.learn-more button{
+  color: rgba(0, 0, 0, 0.79);
+  border-color: rgba(0, 0, 0, 0.79);
 }
 
 @media only screen and (min-width: 600px) and (orientation: landscape) {
