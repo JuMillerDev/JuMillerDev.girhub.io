@@ -271,7 +271,7 @@ ul {
 .contact-banner i {
   font-size: 12vh;
   margin-left: 3vw;
-  --fa-rotate-angle: -30deg;
+  transform: rotate(-30deg);
   color: rgba(0, 0, 0, 0.79);
 }
 
