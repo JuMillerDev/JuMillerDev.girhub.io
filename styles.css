@@ -25,6 +25,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 header {
@@ -254,6 +255,51 @@ ul {
   padding-right: 5vw;
 }
 
+.contact-banner {
+  width:100%;
+  height: 20vh;
+  align-self: center;
+  /*display: flex;*/
+  align-items: center;
+  background-color: #edf08f;
+  margin-bottom: 5vh;
+  box-shadow: -6px 0 white, 6px 0 white, 0px 3px 4px 0px gray;
+
+  display: none;
+}
+
+.contact-banner i {
+  font-size: 12vh;
+  margin-left: 3vw;
+  --fa-rotate-angle: -30deg;
+  color: rgba(0, 0, 0, 0.79);
+}
+
+.contact-banner p {
+  font-family: Futura-Thin;
+  margin-left: 2vw;
+  color: rgba(0, 0, 0, 0.79);
+  font-weight: 200;
+  font-size: 4vw;
+}
+
+.skills-banner {
+  align-self: center;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 18vh;
+  margin-bottom: 4vh;
+  background-color: #e2cb3ad0;
+  display:none;
+}
+
+.skills-banner i {
+  margin-right: 10vh;
+  font-size: 8vh;
+  color: rgba(0, 0, 0, 0.79);
+}
+
 .skills-name {
   text-align: right;
   font-family: Futura-Thin;
@@ -387,6 +433,11 @@ ul {
   border-color: rgba(0, 0, 0, 0.79);
   color: rgba(0, 0, 0, 0.79);
   font-size: 3.2vw;
+}
+
+.github-button:hover {
+  background-color: #f0f2b3;
+  color: rgba(0, 0, 0, 0.79);
 }
 
 .learn-more {
@@ -567,11 +618,6 @@ ul {
   }
   
   .project-code {
-    margin: 5vw;
-    width: 90vw;
-    background-color: rgba(0, 0, 0, 0.79);
-    overflow-y: scroll;
-    color: white;
     font-size: 2.5vw;
   }
   
@@ -595,8 +641,268 @@ ul {
   }
 }
 
-/*@media only screen and (min-width: 1000px) {
-  body {
-    background-color: #1e2021;
+@media only screen and (min-width: 1000px) {
+  
+  header {
+    display: flex;
+    align-items: center;
+    height: 8vh;
   }
-} */
+  
+  footer {
+    height: 8vh;
+  }
+  
+  footer a {
+    font-size: 2.5vh;
+  }
+
+  body {
+    background-color: transparent;
+  }
+
+  main {
+    width: 75%;
+    min-height: 84vh;
+    align-self: center;
+    background-color:rgba(185, 179, 179, 0.232);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .nav {
+    top: 0;
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: transparent;
+  }
+  
+  .logo {
+    /*padding-top: 1.5vh;*/
+    padding-left: 1.7vw;
+    font-size: 4vh;
+    width: 80%;
+  }
+  
+  .unchecked {
+    display: none;
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    padding-top: 0%;
+  }
+  
+  .menu a {
+    font-size: 3vh;
+    line-height: 2vh;
+  }
+  
+  .menu a:hover {
+    color: #f0f2b3;
+    background-color: transparent;
+  }
+  
+  .menu li {
+    width: fit-content;
+    padding: 0 1vw 0 1vw;
+    font-family: Roboto-Thin;
+    font-size: 5vh;
+  }
+  
+  .portrait-photo {
+    max-width: 17vw;
+    max-height: 17vw;
+  }
+  
+  #photo-intro-text {
+    padding-left: 6%;
+    font-size: 2.5vh;
+  }
+  
+  .about-page ~ .about {
+    color: #f0f2b3;
+  }
+  
+  .information-section {
+    display: block;
+    padding-top: 1%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 1%;
+  
+    /*background-color: gray;*/
+  }
+  
+  .information-section h2 {
+    font-size: 3.5vh;
+  }
+  
+  .information-section p {
+    font-size: 2.7vh;
+  }
+
+  .link-section{
+    width: 70vw;
+    height:10vw;
+    padding: 0;
+    margin: 0 2vw 0 2vw;
+  }
+  
+  .link-section h5 {
+    margin-top: 4vh;
+    padding: 0;
+    font-size: 2.3vh;
+  }
+  
+  .link-button {
+    font-size: 2vh;
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    border: 0.4vh solid #f0f2b3;
+    border-radius: 2vh;
+  }
+  
+  .link-button:hover {
+    color:rgba(0, 0, 0, 0.79);
+  }
+  
+  .article-img {
+    justify-self: center;
+    height: 20vw;
+    width: 70vw;
+    margin: 0 2vw 0 2vw;
+  }
+  
+  .contact-container {
+    height: 7vh;
+    width: 60vw;
+    background-color: rgba(0, 0, 0, 0.79);
+    align-self: center;
+    font-size: 3vh;
+    margin: 1vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #eef272f5;
+    font-family: Roboto-Bold;
+    box-shadow: 1px 1px 1px 1px gray;
+  }
+
+  .contact-banner {
+    display: flex;
+  }
+  
+  .contact-container i {
+    padding-right: 2vw;
+  }
+  
+  .skills-name {
+    padding-right: 8vh;
+    font-size: 2.5vw;
+  }
+  
+  .skills-item {
+    font-size: 3vh;
+    font-weight: 600;
+    font-family: Futura-Thin;
+  }
+
+  .skills-banner {
+    display: flex;
+  }
+  
+  .container {
+    width: 100%;
+    background-color: #d2d2d2;
+  }
+  
+  .skills-scale {
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    border-color: #1e2021;
+  }
+  
+  .cpp {
+    padding-right: 5vh;
+    font-size: 3vh;
+  }
+  
+  .html {
+    padding-right: 5vh;
+    font-size: 3vh;
+  }
+  
+  .python {
+    padding-right: 5vh;
+    font-size: 3vh;
+  }
+  
+  .skill-list {
+    margin-bottom: 2vh;
+  }
+  
+  .skill-list li {
+    width: 51.5vw;
+    font-size: 3vh;
+  }
+  
+  .project{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .project h3 {
+    font-size: 3vh;
+  }
+  
+  .project article {
+    font-size: 2.5vh;
+  }
+  
+  .project-text {
+    width: 90%;
+    padding: 0;
+    align-self: center;
+    font-size: 2.5vh;
+  }
+
+  .project-text h2 {
+    font-size: 4vh;
+  }
+
+  hr {
+    color: #1e2021;
+    width: 90%;
+  }
+  
+  .project-code {
+    width: 90%;
+    margin-top: 3vh;
+    margin-bottom: 4vh;
+    align-self: center;
+    font-size: 1.9vh;
+  }
+  
+  .github-button {
+    width:50vh;
+    height: 8vh;
+    margin: 0;
+    border-radius: 2vh;
+    font-size: 2.5vh;
+  }
+
+  #github-button-pos {
+    align-self: center;
+    margin-bottom: 4vh;
+  }
+  
+} 
