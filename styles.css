@@ -291,6 +291,7 @@ ul {
   height: 18vh;
   margin-bottom: 4vh;
   background-color: #e2cb3ad0;
+  box-shadow: -6px 0 white, 6px 0 white, 0px 3px 4px 0px gray;
   display:none;
 }
 
