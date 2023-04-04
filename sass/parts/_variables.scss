@@ -1,0 +1,41 @@
+$primary-background-color: rgba(185, 179, 179, 0.232);
+$second-background-color: #1e2021;
+$third-background-color: #f0f2b3;
+
+$contact-banner-background: #edf08f;
+$skill-bar-background-color: #e2cb3ad0;
+$skills-background-color: #d2d2d2;
+
+$link-section-background-color: rgba(0, 0, 0, 0.79);
+
+$primary-font-color: #000000;
+$second-font-color: whitesmoke;
+$link-section-font-color: rgba(238, 237, 237, 0.955);
+$contact-font-color: #eef272f5;
+$skills-font-color: rgba(0, 0, 0, 0.533);
+
+$box-shadow-config: 1px 1px 5px 1px gray;
+$banner-box-shadow-config: -6px 0 white, 6px 0 white, 0px 3px 4px 0px gray;
+$link-button-border: 0.4vw solid #f0f2b3;
+$link-button-border-large: 0.4vh solid #f0f2b3;
+
+$logo-size: 8vw;
+
+$portrait-size: 50vw;
+$portrair-size-medium: 35vw;
+$portrait-size-large: 17vw;
+
+$primary-font: Futura-Thin;
+$second-font: Roboto-Light;
+$third-font: Roboto-Bold;
+
+$reserve-primary-font: monospace;
+$reserve-secondary-font: sans-serif;
+
+$basic-font-weight: 600;
+
+$breakpoints: (
+    //small: 580px,
+    medium: 600px,
+    large: 1000px
+);

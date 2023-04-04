@@ -1,55 +1,51 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>YMportfolio-Compiler</title>
-    <link rel="stylesheet" href="styles.css" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"
-    >
-  </head>
 
-  <body>
-    <header>
-      <h2 class="logo">YULIIA MELNYK</h2>
-      <input type="checkbox" id="side-menu" >
-      <label class="unchecked" for="side-menu"
-        ><span class="fas fa-bars"></span
-      ></label>
-      <hr id="nav-hr" >
-      <nav class="nav">
-        <ul class="menu">
-          <li><a href="index.html" class="about">About Me</a></li>
-          <li><a href="skills.html" class="specialities">My Skills</a></li>
-          <li><a href="projects.html" class="projects">My Projects</a></li>
-          <li>
-            <a href="contact.html" class="contacts">Contact information</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+<head>
+  <title>YMportfolio-Compiler</title>
+  <link rel="stylesheet" href="sass/stylescompressed.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+</head>
 
-    <main>
-      <section class="project-text">
-        <h2>Compiler</h2>
-        <article>
-          My compiler is written in C++ with Flex lexer and Bison parser. It
-          processes procedural program code with availibility to store and
-          change user variables. User can write in code such constructions as:
-          if...else, if...else if..., repeat...until, while...do, use comparison
-          operators and arithmetic actions (such as addition, subtraction,
-          division, multiplication). The source code is transformed to effective
-          assembler code, allowing to multiplicate and divide long numbers.
-        </article>
-        <p>
-          Example of assigning a varible is shown below. The variable has to be
-          first declared in the procedure head. Assigning memory adress to
-          variable will be successful if variable is declared.
-        </p>
-      </section>
-      <section class="project-code">
-        <pre>
+<body>
+  <header>
+    <h2 class="logo">YULIIA MELNYK</h2>
+    <input type="checkbox" id="side-menu">
+    <label class="unchecked" for="side-menu"><span class="fas fa-bars"></span></label>
+    <hr id="nav-hr">
+    <nav class="nav">
+      <ul class="menu">
+        <li><a href="index.html" class="about">About Me</a></li>
+        <li><a href="skills.html" class="specialities">My Skills</a></li>
+        <li><a href="projects.html" class="projects">My Projects</a></li>
+        <li>
+          <a href="contact.html" class="contacts">Contact information</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="project-text">
+      <h2>Compiler</h2>
+      <article>
+        My compiler is written in C++ with Flex lexer and Bison parser. It
+        processes procedural program code with availibility to store and
+        change user variables. User can write in code such constructions as:
+        if...else, if...else if..., repeat...until, while...do, use comparison
+        operators and arithmetic actions (such as addition, subtraction,
+        division, multiplication). The source code is transformed to effective
+        assembler code, allowing to multiplicate and divide long numbers.
+      </article>
+      <p>
+        Example of assigning a varible is shown below. The variable has to be
+        first declared in the procedure head. Assigning memory adress to
+        variable will be successful if variable is declared.
+      </p>
+    </section>
+    <section class="project-code">
+      <pre>
             <code>
     void Variable::addNotAssignedVariable(string procName,string identifier){
 
@@ -77,16 +73,17 @@
     }
             </code>
         </pre>
-      </section>
-      <form action="skills.html" id="github-button-pos">
-        <button class="github-button">
-          <strong>Check This Project At GitHub</strong>
-        </button>
-      </form>
-    </main>
+    </section>
+    <form action="skills.html" id="github-button-pos">
+      <button class="github-button">
+        <strong>Check This Project At GitHub</strong>
+      </button>
+    </form>
+  </main>
 
-    <footer>
-      <a href="contact.html">Contact Me</a>
-    </footer>
-  </body>
+  <footer>
+    <a href="contact.html">Contact Me</a>
+  </footer>
+</body>
+
 </html>

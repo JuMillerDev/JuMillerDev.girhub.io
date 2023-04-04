@@ -1,0 +1,775 @@
+body {
+    margin: 0%;
+    padding: 0%;
+
+    @include mq(large) {
+        background-color: transparent;
+    }
+}
+
+header {
+    top: 0;
+    height: 18vw;
+
+    @include mq(medium) {
+        height: 10vw;
+    }
+
+    @include mq(large) {
+        display: flex;
+        align-items: center;
+        height: 8vh;
+    }
+}
+
+footer {
+    height: 17vw;
+
+    @include mq(medium) {
+        height: 10vw;
+    }
+
+    @include mq(large) {
+        height: 8vh;
+    }
+
+    a {
+        color: $third-background-color;
+        font-family: $second-font, $reserve-secondary-font;
+        font-size: 4.5vw;
+        font-weight: $basic-font-weight;
+
+        @include mq(medium) {
+            font-size: 3vw;
+        }
+
+        @include mq(large) {
+            font-size: 2.5vh;
+        }
+    }
+}
+
+main {
+    @include mq(large) {
+        width: 75%;
+        min-height: 84vh;
+        align-self: center;
+        background-color: $primary-background-color;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+#nav-hr {
+    display: none;
+}
+
+.nav {
+    top: 17vw;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    display: none;
+    background-color: $second-background-color;
+
+    @include mq(medium) {
+        top: 10vw;
+    }
+
+    @include mq(large) {
+        top: 0;
+        height: 8vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        background-color: transparent;
+    }
+}
+
+.logo {
+    font-family: $second-font, $reserve-secondary-font;
+    color: $second-font-color;
+    display: inline-block;
+    margin-top: 0%;
+    padding-top: 5vw;
+    padding-left: 3vw;
+    vertical-align: middle;
+    font-size: 8vw;
+    width: 85%;
+
+    @include mq(medium) {
+        padding-top: 2vw;
+        font-size: 6vw;
+        width: 87%;
+    }
+
+    @include mq(large) {
+        padding-left: 1.7vw;
+        font-size: 4vh;
+        width: 80%;
+    }
+}
+
+.unchecked {
+    font-family: $second-font, $reserve-secondary-font;
+    font-size: 6vw;
+    color: $third-background-color;
+
+    @include mq(medium) {
+        font-size: 5vw;
+    }
+
+    @include mq(large) {
+        display: none;
+    }
+}
+
+.menu {
+    width: 100vw;
+    text-align: center;
+    display: block;
+    position: relative;
+    padding-left: 0;
+    padding-top: 0%;
+
+    @include mq(large) {
+        display: flex;
+        justify-content: flex-end;
+        position: relative;
+        padding-top: 0%;
+    }
+
+    a {
+        display: block;
+        color: $second-font-color;
+        font-size: 5.5vw;
+        line-height: 9vw;
+
+        @include mq(medium) {
+            font-size: 4vw;
+            line-height: 6vw;
+        }
+
+        @include mq(large) {
+            font-size: 3vh;
+            line-height: 2vh;
+        }
+    }
+
+    a:hover {
+        background-color: $second-font-color;
+
+        @include mq(medium) {
+            color: $second-background-color;
+        }
+
+        @include mq(large) {
+            color: $third-background-color;
+            background-color: transparent;
+        }
+    }
+
+    li {
+        width: 100%;
+        font-family: $second-font, $reserve-secondary-font;
+        font-size: 2vw;
+
+        @include mq(large) {
+            width: fit-content;
+            padding: 0 1vw 0 1vw;
+            font-family: $second-font, $reserve-secondary-font;
+            font-size: 5vh;
+        }
+    }
+}
+
+#side-menu:checked {
+    display: block;
+
+    &~nav {
+        max-height: 45vw;
+        display: block;
+
+        @include mq(medium) {
+            max-height: 28vw;
+        }
+    }
+
+    &~#nav-hr {
+        display: block;
+    }
+}
+
+.portrait-photo {
+    max-width: $portrait-size;
+    max-height: $portrait-size;
+
+    @include mq(medium) {
+        max-width: $portrair-size-medium;
+        max-height: $portrair-size-medium;
+    }
+
+    @include mq(large) {
+        max-width: $portrait-size-large;
+        max-height: $portrait-size-large;
+    }
+}
+
+#photo-intro-section {
+    display: inline-flex;
+    background-color: $third-background-color;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+
+    @include mq(medium) {
+        margin: 2vw;
+        padding: 1.5vw 2vw 1.5vw 2vw;
+    }
+}
+
+#photo-intro-text {
+    /*width: 50vw;*/
+    padding-left: 3%;
+    padding-right: 2%;
+    display: block;
+    font-size: 4vw;
+    font-family: Futura-Thin;
+
+    @include mq(medium) {
+        padding-left: 4%;
+        padding-right: 2%;
+        font-size: 2.7vw;
+    }
+
+    @include mq(large) {
+        padding-left: 6%;
+        font-size: 2.5vh;
+    }
+}
+
+.about-page~.about {
+    color: $third-background-color;
+
+    @include mq(large) {
+        color: $third-background-color;
+    }
+}
+
+.information-section {
+    display: block;
+    padding-top: 2%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 2%;
+
+    @include mq(medium) {
+        padding: 2vw 3vw 2vw 3vw;
+    }
+
+    @include mq(large) {
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+
+    h2 {
+        margin: 0;
+        font-size: 6vw;
+        font-family: $primary-font, $reserve-primary-font;
+
+        @include mq(medium) {
+            font-size: 4vw;
+        }
+
+        @include mq(large) {
+            font-size: 3.5vh;
+        }
+    }
+
+    p {
+        font-family: $second-font, $reserve-secondary-font;
+        text-align: justify;
+        font-size: medium;
+        font-size: 4vw;
+
+        @include mq(medium) {
+            font-size: 3vw;
+        }
+
+        @include mq(large) {
+            font-size: 2.7vh;
+        }
+    }
+}
+
+.link-section {
+    background-color: $link-section-background-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    margin: 0;
+
+    @include mq(medium) {
+        height: 22vw;
+        margin: 0 3vw 0 3vw;
+    }
+
+    @include mq(large) {
+        width: 70vw;
+        height: 12vw;
+        padding: 0;
+        margin: 0 2vw 0 2vw;
+    }
+
+    h5 {
+        margin-left: 2vw;
+        margin-right: 2vw;
+        margin-top: 0;
+        padding-top: 5vw;
+        margin-bottom: 0;
+        color: $link-section-font-color;
+        text-align: center;
+        font-family: $primary-font, $reserve-primary-font;
+        font-weight: 900;
+        font-size: 3.5vw;
+
+        @include mq(medium) {
+            font-weight: 800;
+            font-size: 2.7vw;
+        }
+
+        @include mq(large) {
+            margin-top: 4vh;
+            padding: 0;
+            font-size: 2.3vh;
+        }
+    }
+}
+
+.link-button {
+    width: fit-content;
+    height: fit-content;
+    font-size: 3.5vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    border: $link-button-border;
+    color: $third-background-color;
+    background-color: transparent;
+    border-radius: 2vw;
+    font-family: $primary-font;
+    font-weight: 900;
+
+    @include mq(medium) {
+        font-size: 2.7vw;
+        padding-top: 0.5vw;
+        padding-bottom: 0.5vw;
+        font-weight: 800;
+    }
+
+    @include mq(large) {
+        font-size: 2vh;
+        margin-top: 2vw;
+        margin-bottom: 2vw;
+        padding-top: 1vh;
+        padding-bottom: 1vh;
+        border: $link-button-border-large;
+        border-radius: 2vh;
+    }
+
+    &:hover {
+        background-color: $third-background-color;
+
+        @include mq(large) {
+            color: $second-background-color;
+        }
+    }
+}
+
+.article-img {
+    height: 35vw;
+    width: 100vw;
+    margin: 0;
+
+    @include mq(medium) {
+        height: 29vw;
+        width: 94vw;
+        margin-left: 3vw;
+        margin-right: 3vw;
+    }
+
+    @include mq(large) {
+        justify-self: center;
+        height: 20vw;
+        width: 70vw;
+        margin: 0 2vw 0 2vw;
+    }
+}
+
+.contact-container {
+    height: 10vh;
+    background-color: rgba(0, 0, 0, 0.837);
+    font-size: 5vw;
+    margin: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $contact-font-color;
+    font-family: $third-font;
+    box-shadow: 1px 1px 1px 1px gray;
+
+    @include mq(medium) {
+        height: 6vh;
+        width: 80vw;
+        margin-left: 10vw;
+        margin-right: 10vw;
+        font-size: 3vw;
+        background-color: $second-background-color;
+        box-shadow: none;
+    }
+
+    @include mq(large) {
+        height: 7vh;
+        width: 60vw;
+        background-color: $second-background-color;
+        align-self: center;
+        font-size: 3vh;
+        margin: 1vw;
+    }
+
+    i {
+        padding-right: 5vw;
+
+        @include mq(large) {
+            padding-right: 2vw;
+        }
+    }
+}
+
+.contact-banner {
+    width: 100%;
+    height: 20vh;
+    align-self: center;
+    align-items: center;
+    background-color: $contact-banner-background;
+    margin-bottom: 5vh;
+    box-shadow: $banner-box-shadow-config;
+
+    display: none;
+
+    @include mq(large) {
+        display: flex;
+    }
+
+    i {
+        font-size: 12vh;
+        margin-left: 3vw;
+        transform: rotate(-30deg);
+        color: $link-section-background-color;
+    }
+
+    p {
+        font-family: $primary-font;
+        margin-left: 2vw;
+        color: $link-section-background-color;
+        font-weight: 200;
+        font-size: 4vw;
+    }
+}
+
+.skills-banner {
+    align-self: center;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 18vh;
+    margin-bottom: 4vh;
+    background-color: $skill-bar-background-color;
+    box-shadow: $banner-box-shadow-config;
+    display: none;
+
+    @include mq(large) {
+        display: flex;
+    }
+
+    i {
+        margin-right: 10vh;
+        font-size: 8vh;
+        color: $link-section-background-color;
+    }
+}
+
+.skills-name {
+    text-align: right;
+    font-family: $primary-font, $reserve-primary-font;
+    padding-right: 10vw;
+    font-size: 6.5vw;
+    font-weight: $basic-font-weight;
+
+    @include mq(medium) {
+        font-size: 4vw;
+    }
+
+    @include mq(large) {
+        padding-right: 8vh;
+        font-size: 2.5vw;
+    }
+}
+
+.skills-item {
+    width: 90%;
+    font-size: 5vw;
+    font-weight: 600;
+    font-family: $primary-font, $reserve-primary-font;
+
+    @include mq(medium) {
+        font-size: 3vw;
+    }
+
+    @include mq(large) {
+        font-size: 3vh;
+    }
+}
+
+.skill {
+    display: block;
+    justify-content: space-between;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+.container {
+    width: 100%;
+    background-color: $skills-background-color;
+}
+
+.skills-scale {
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    border-color: $second-background-color;
+
+    @include mq(medium) {
+        padding-top: 1vw;
+        padding-bottom: 1vw;
+    }
+
+    @include mq(large) {
+        padding-top: 3vh;
+        padding-bottom: 3vh;
+    }
+}
+
+%skill-box {
+    box-sizing: border-box;
+    padding-right: 5vw;
+    background-color: $skill-bar-background-color;
+    text-align: end;
+    color: $skills-font-color;
+    font-weight: 700;
+    font-size: 5vw;
+    font-family: $second-font, $reserve-secondary-font;
+
+    @include mq(medium) {
+        font-size: 3vw;
+    }
+
+    @include mq(large) {
+        padding-right: 5vh;
+        font-size: 3vh;
+    }
+}
+
+.cpp {
+    @extend %skill-box;
+    width: 70%;
+}
+
+.html {
+    @extend %skill-box;
+    width: 50%;
+}
+
+.python {
+    @extend %skill-box;
+    width: 80%;
+}
+
+.skill-list {
+    list-style: circle;
+    float: right;
+    background-color: #ddd;
+    margin-bottom: 5vh;
+
+    @include mq(medium) {
+        margin-bottom: 3vh;
+    }
+
+    @include mq(large) {
+        margin-bottom: 2vh;
+    }
+
+    li {
+        font-size: 4.5vw;
+        font-family: $second-font, $reserve-secondary-font;
+
+        @include mq(medium) {
+            font-size: 2.7vw;
+        }
+
+        @include mq(large) {
+            width: 51.5vw;
+            font-size: 3vh;
+        }
+    }
+}
+
+.project {
+    display: flex;
+    flex-direction: column;
+
+    h3 {
+        padding-left: 5vw;
+        padding-right: 5vw;
+        font-size: 5vw;
+        font-family: $primary-font, $reserve-primary-font;
+
+        @include mq(medium) {
+            font-size: 4vw;
+        }
+
+        @include mq(large) {
+            font-size: 3vh;
+        }
+    }
+
+    article {
+        padding-left: 5vw;
+        padding-right: 5vw;
+        font-size: 4.5vw;
+        font-family: $second-font, $reserve-secondary-font;
+
+        @include mq(medium) {
+            font-size: 2.7vw;
+        }
+
+        @include mq(large) {
+            font-size: 2.5vh;
+        }
+    }
+}
+
+.project-text {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    font-size: 4.3vw;
+    text-align: justify;
+    font-family: $second-font, $reserve-secondary-font;
+    font-weight: 500;
+
+    @include mq(medium) {
+        font-size: 2.7vw;
+    }
+
+    @include mq(large) {
+        width: 90%;
+        padding: 0;
+        align-self: center;
+        font-size: 2.5vh;
+    }
+
+    h2 {
+        font-family: $primary-font, $reserve-primary-font;
+
+        @include mq(medium) {
+            font-size: 4vw;
+        }
+
+        @include mq(large) {
+            font-size: 4vh;
+        }
+    }
+}
+
+hr {
+    @include mq(large) {
+        color: $second-background-color;
+        width: 90%;
+    }
+}
+
+.project-code {
+    margin: 5vw;
+    width: 90vw;
+    background-color: $link-section-background-color;
+    overflow-y: scroll;
+    color: white;
+    font-size: 3.5vw;
+
+    @include mq(medium) {
+        font-size: 2.5vw;
+    }
+
+    @include mq(large) {
+        width: 90%;
+        margin-top: 3vh;
+        margin-bottom: 4vh;
+        align-self: center;
+        font-size: 1.9vh;
+    }
+}
+
+.github-button {
+    width: 50vw;
+    height: 10vw;
+    margin-left: 25vw;
+    margin-right: 25vw;
+    margin-bottom: 5vw;
+    font-family: $primary-font, $reserve-primary-font;
+    border-radius: 15px;
+    background-color: transparent;
+    border-color: $link-section-background-color;
+    color: $link-section-background-color;
+    font-size: 3.2vw;
+
+    @include mq(medium) {
+        height: 6vw;
+        font-size: 2.7vw;
+    }
+
+    @include mq(large) {
+        width: 50vh;
+        height: 8vh;
+        margin: 0;
+        border-radius: 2vh;
+        font-size: 2.5vh;
+    }
+
+    &:hover {
+        background-color: $third-background-color;
+        color: $link-section-background-color;
+    }
+}
+
+.learn-more {
+    display: flex;
+    justify-content: center;
+
+    button {
+        color: $link-section-background-color;
+        border-color: $link-section-background-color;
+    }
+}
+
+#github-button-pos {
+    @include mq(large) {
+        align-self: center;
+        margin-bottom: 4vh;
+    }
+}

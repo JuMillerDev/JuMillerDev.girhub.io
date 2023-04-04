@@ -1,0 +1,21 @@
+@charset 'utf-8';
+
+@font-face {
+    font-family: 'Roboto-Light';
+    src: url('../fonts/Roboto-Light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: url('../fonts/Roboto-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Futura-Thin';
+    src: url('../fonts/Futura Book font.ttf') format('truetype');
+}
+
+@import 'parts/variables';
+@import 'parts/normalize';
+@import 'parts/mixins';
+@import 'parts/basicstyle'

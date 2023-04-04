@@ -1,115 +1,116 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>YMportfolio-Skills</title>
-    <link rel="stylesheet" href="styles.css" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css"
-    >
-  </head>
 
-  <body>
-    <header>
-      <h2 class="logo">YULIIA MELNYK</h2>
-      <input type="checkbox" id="side-menu" >
-      <label class="unchecked" for="side-menu"
-        ><span class="fas fa-bars"></span
-      ></label>
-      <hr id="nav-hr" >
-      <nav class="nav">
-        <ul class="menu">
-          <li><a href="index.html" class="about">About Me</a></li>
-          <li><a href="skills.html" class="specialities">My Skills</a></li>
-          <li><a href="projects.html" class="projects">My Projects</a></li>
+<head>
+  <title>YMportfolio-Skills</title>
+  <link rel="stylesheet" href="sass/stylescompressed.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css">
+</head>
+
+<body>
+  <header>
+    <h2 class="logo">YULIIA MELNYK</h2>
+    <input type="checkbox" id="side-menu">
+    <label class="unchecked" for="side-menu"><span class="fas fa-bars"></span></label>
+    <hr id="nav-hr">
+    <nav class="nav">
+      <ul class="menu">
+        <li><a href="index.html" class="about">About Me</a></li>
+        <li><a href="skills.html" class="specialities">My Skills</a></li>
+        <li><a href="projects.html" class="projects">My Projects</a></li>
+        <li>
+          <a href="contact.html" class="contacts">Contact information</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <p class="skills-name">My programming skills</p>
+    <div class="skills-banner"><i class="fas fa-code"></i></div>
+    <section class="skill">
+      <p class="skills-item"><strong>C++</strong></p>
+      <div class="container">
+        <div class="skills-scale cpp">Good</div>
+      </div>
+      <article class="skill-art">
+        <ul class="skill-list">
+          <li>Great understanding of OOP</li>
+          <li>Knowledge of data structures creation and basic algorithms</li>
+          <li>Understanding of Unix for c++ development</li>
+          <li>Built c++ compilator with Flex lexer and Bison parser</li>
           <li>
-            <a href="contact.html" class="contacts">Contact information</a>
+            Programmed movement and logic for a car build with Arduino Uno
+            microcontroller
           </li>
         </ul>
-      </nav>
-    </header>
+      </article>
+    </section>
+    <section class="skill">
+      <p class="skills-item"><strong>Java</strong></p>
+      <div class="container">
+        <div class="skills-scale cpp">Good</div>
+      </div>
+      <article class="skill-art">
+        <ul class="skill-list">
+          <li>Great understanding of OOP</li>
+          <li>Knowledge of data structures creation and basic algorithms</li>
+          <li>
+            Knowledge of Java Swing and JavaFX for GUI application development
+          </li>
+          <li>
+            Created GUI multiplayer Chinese Checkers game with availible moves
+            detection with Java Threads.
+          </li>
+          <li>Created GUI Breakout game with all it's logic</li>
+        </ul>
+      </article>
+    </section>
+    <section class="skill">
+      <p class="skills-item"><strong>HTML/CSS</strong></p>
+      <div class="container">
+        <div class="skills-scale html">Average</div>
+      </div>
+      <article class="skill-art">
+        <ul class="skill-list">
+          <li>Knowledge about responsive design</li>
+          <li>
+            General knowledge of tags, different types of containers, their
+            styling.
+          </li>
+        </ul>
+      </article>
+    </section>
+    <section class="skill">
+      <p class="skills-item"><strong>Python</strong></p>
+      <div class="container">
+        <div class="skills-scale python">Great</div>
+      </div>
+      <article class="skill-art">
+        <ul class="skill-list">
+          <li>Deep knowledge of OOP</li>
+          <li>
+            Built programs for cryptographic communication with hashlib
+            (sha,md encoding functions)
+          </li>
+          <li>
+            Built SPEKE cryptographic protocol for secure communication.
+          </li>
+          <li>
+            Statistical analysis and possibility theorem proofs with NumPy,
+            SciPy
+          </li>
+          <li>Built Discord Chatbot</li>
+        </ul>
+      </article>
+    </section>
+    <!-- To-do write other non-programming skills -->
+  </main>
 
-    <main>
-      <p class="skills-name">My programming skills</p>
-      <div class="skills-banner"><i class="fas fa-code"></i></div>
-      <section class="skill">
-        <p class="skills-item"><strong>C++</strong></p>
-        <div class="container"><div class="skills-scale cpp">Good</div></div>
-        <article class="skill-art">
-          <ul class="skill-list">
-            <li>Great understanding of OOP</li>
-            <li>Knowledge of data structures creation and basic algorithms</li>
-            <li>Understanding of Unix for c++ development</li>
-            <li>Built c++ compilator with Flex lexer and Bison parser</li>
-            <li>
-              Programmed movement and logic for a car build with Arduino Uno
-              microcontroller
-            </li>
-          </ul>
-        </article>
-      </section>
-      <section class="skill">
-        <p class="skills-item"><strong>Java</strong></p>
-        <div class="container"><div class="skills-scale cpp">Good</div></div>
-        <article class="skill-art">
-          <ul class="skill-list">
-            <li>Great understanding of OOP</li>
-            <li>Knowledge of data structures creation and basic algorithms</li>
-            <li>
-              Knowledge of Java Swing and JavaFX for GUI application development
-            </li>
-            <li>
-              Created GUI multiplayer Chinese Checkers game with availible moves
-              detection with Java Threads.
-            </li>
-            <li>Created GUI Breakout game with all it's logic</li>
-          </ul>
-        </article>
-      </section>
-      <section class="skill">
-        <p class="skills-item"><strong>HTML/CSS</strong></p>
-        <div class="container">
-          <div class="skills-scale html">Average</div>
-        </div>
-        <article class="skill-art">
-          <ul class="skill-list">
-            <li>Knowledge about responsive design</li>
-            <li>
-              General knowledge of tags, different types of containers, their
-              styling.
-            </li>
-          </ul>
-        </article>
-      </section>
-      <section class="skill">
-        <p class="skills-item"><strong>Python</strong></p>
-        <div class="container">
-          <div class="skills-scale python">Great</div>
-        </div>
-        <article class="skill-art">
-          <ul class="skill-list">
-            <li>Deep knowledge of OOP</li>
-            <li>
-              Built programs for cryptographic communication with hashlib
-              (sha,md encoding functions)
-            </li>
-            <li>
-              Built SPEKE cryptographic protocol for secure communication.
-            </li>
-            <li>
-              Statistical analysis and possibility theorem proofs with NumPy,
-              SciPy
-            </li>
-            <li>Built Discord Chatbot</li>
-          </ul>
-        </article>
-      </section>
-      <!-- To-do write other non-programming skills -->
-    </main>
+  <footer>
+    <a href="contact.html">Contact Me</a>
+  </footer>
+</body>
 
-    <footer>
-      <a href="contact.html">Contact Me</a>
-    </footer>
-  </body>
 </html>
