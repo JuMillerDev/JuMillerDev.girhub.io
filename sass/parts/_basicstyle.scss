@@ -393,6 +393,19 @@ main {
     }
 }
 
+.link-button-git {
+    @extend .link-button;
+    color: $link-section-background-color;
+    border-color: $link-section-background-color;
+    background-color: $third-background-color;
+    margin-left: 5vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    justify-self: left;
+}
+
 .article-img {
     height: 35vw;
     width: 100vw;
@@ -506,6 +519,16 @@ main {
     }
 }
 
+.projects-banner {
+    @extend .skills-banner;
+    justify-content: space-between;
+}
+
+.gihub-all-projects {
+    justify-self: flex-start;
+    margin-right: 60%;
+}
+
 .skills-name {
     text-align: right;
     font-family: $primary-font, $reserve-primary-font;
@@ -523,6 +546,11 @@ main {
     }
 }
 
+.projects-name {
+    @extend .skills-name;
+    padding-right: 5vw;
+}
+
 .skills-item {
     width: 90%;
     font-size: 5vw;
@@ -537,6 +565,8 @@ main {
         font-size: 3vh;
     }
 }
+
+
 
 .skill {
     display: block;
@@ -703,6 +733,7 @@ hr {
         width: 90%;
     }
 }
+
 
 .project-code {
     margin: 5vw;
