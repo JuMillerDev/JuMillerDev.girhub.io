@@ -1,0 +1,3 @@
+<a (mouseenter)="isHovered = true" (mouseleave)="isHovered = false" class="icon" href={{href}}>
+    <img [@sideInformationHovered]="isHovered ? 'hovered' : 'initial'" [attr.width]="width" src={{src}} title={{title}}>
+</a>

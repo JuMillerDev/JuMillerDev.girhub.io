@@ -1,0 +1,15 @@
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+canvas {
+    position: fixed;
+    bottom: 0;
+}
+
+app-icon-button {
+    margin-top: 20px;
+}

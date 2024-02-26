@@ -1,0 +1,22 @@
+@import '../../../styles.scss';
+
+p {
+    transform: rotate(90deg);
+    color: $button-secondary-color;
+}
+
+canvas {
+    padding-top: 10vh;
+}
+
+#content{
+    @include theme(DarkTheme);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#spacer{
+    min-height: 60vh;
+}
+

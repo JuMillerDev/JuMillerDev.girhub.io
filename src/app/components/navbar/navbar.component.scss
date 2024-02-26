@@ -1,0 +1,52 @@
+@import '../../../styles.scss';
+@import url('https://fonts.cdnfonts.com/css/sf-mono');
+
+
+#navbar {
+    @include theme(DarkTheme);
+    width: 90%;
+    display: flex;
+    margin: 0;
+    justify-content: space-between;
+    padding: 45px 0;
+    align-items: center;
+}
+
+.text-button {
+    background: none;
+    color: $main-text-color;
+    font-family: $primary-font-family;
+    border: none;
+    cursor: pointer;
+    &:hover {
+        color: $button-secondary-color;
+    }
+}
+
+.border-button {
+    background: none;
+    cursor: pointer;
+    font-family: $primary-font-family;
+    color: $button-secondary-color;
+    margin-left: 10%;
+    padding: 14px 28px;
+    border: solid $button-secondary-color;
+    border-radius: 7px;
+}
+
+#list {
+    margin-right: auto;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    right: 15%;
+}
+
+#logo {
+    position: fixed;
+    left: 4%;
+}
+
+#item {
+    margin-left: 3%; 
+}

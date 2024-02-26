@@ -1,0 +1,13 @@
+@import '../../../../styles.scss';
+
+.icon { 
+    img {
+        filter: invert(99%) sepia(2%) saturate(185%) hue-rotate(37deg) brightness(111%) contrast(76%);
+    }
+
+    &:hover{
+        img {
+            filter: invert(74%) sepia(14%) saturate(1752%) hue-rotate(100deg) brightness(113%) contrast(105%);
+        }
+    }
+}

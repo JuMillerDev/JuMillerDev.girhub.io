@@ -1,0 +1,16 @@
+
+<app-navbar *ngIf="showFloatingNavbar" [class.shadow]="isNotOnTopOfPage" @slideFromTop></app-navbar>
+
+
+<div id="wrapper">
+   <app-left-information-container></app-left-information-container>
+   <div id="main-scrolling-body">
+    <app-welcome-section (aboutInView)="onAboutInView($event)"></app-welcome-section>
+    <app-about-section [@slideFromBottom]="viewsToLoad.aboutInView"></app-about-section>
+    <app-experience-section></app-experience-section>
+    <app-projects-section></app-projects-section>
+    <app-contact-section></app-contact-section>
+   </div>
+   <app-right-information-container></app-right-information-container>
+</div>
+

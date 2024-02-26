@@ -1,0 +1,13 @@
+<nav id="navbar">
+    <div id="logo">
+        <img width="23%" src="assets/logo.svg" alt="logo"/>
+    </div>
+    <div id="list">
+        <button class="text-button" (click)="scrollToAnotherSection('welcome')">Home</button>
+        <button class="text-button" id="item" (click)="scrollToAnotherSection('about')">About</button>
+        <button class="text-button" id="item" (click)="scrollToAnotherSection('experience')">Experience</button>
+        <button class="text-button" id="item" (click)="scrollToAnotherSection('projects')">Projects</button>
+        <button class="text-button" id="item" (click)="scrollToAnotherSection('contact')">Contact</button>
+        <button [@buttonHoverAnimation]="buttonHovered ? 'hovered' : 'initial'" (mouseenter)="buttonHovered = true" (mouseleave)="buttonHovered = false"  class="border-button" (click)="openResumePdf()">Resume</button>
+    </div>
+</nav>

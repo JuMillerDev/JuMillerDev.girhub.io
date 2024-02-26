@@ -1,0 +1,26 @@
+@import url('https://fonts.cdnfonts.com/css/sf-mono');
+
+@mixin theme($theme: DarkTheme) {
+    background: #151e35;
+    color: #e1e1e1;
+    font-family: 'SF Mono';
+}
+
+$background-color: #151e35;
+$main-text-color: #e1e1e1;
+$button-secondary-color: #38ffb3;
+
+$primary-font-family: 'SF Mono';
+$secondary-font-family: 'Calibre';
+
+html{
+    scrollbar-width: thin;
+    scrollbar-color: #e1e1e19a $background-color
+}
+
+body {
+    @include theme(DarkTheme);
+    margin: 0;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: 'SF Mono', "Helvetica Neue", sans-serif; }
