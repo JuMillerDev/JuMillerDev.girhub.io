@@ -1,0 +1,74 @@
+@import './../../app.component.scss';
+
+#experience {
+    @include theme(DarkTheme);
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-heading::before {
+    content: "02.";
+}
+
+.container {
+    display: flex;
+    min-width: 100%;
+    flex-direction: row;
+
+    .sidebar {
+        width: 30%;
+
+        ul {
+            width: 90%;
+            list-style-type: none;
+        }
+        
+        li {
+            position: relative;
+            width: fit-content;
+            padding: 10%;
+            cursor: pointer;
+        
+            &::before{
+                content: '';
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                line-height: inherit;
+                width: 2px;
+                background-color: white;
+                opacity: 0.25;
+            }
+        
+            &.clicked {
+                
+        
+                &::before{
+                    background-color: $button-secondary-color;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .content {
+        width: 70%;
+        #inner {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .job-info {
+            width: 50%;
+        }
+    }
+}

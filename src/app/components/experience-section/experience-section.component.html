@@ -1,1 +1,25 @@
-<p>experience-section works!</p>
+<section id="experience">
+    <h2 class="section-heading">Experience</h2>
+    <div class="container">
+        <div class="sidebar">
+          <ul>
+            <li class="job-title" *ngFor="let job of jobTitles" (click)="toggleJobInfo(job)" [class.clicked]="job.clicked">
+              {{ job.title }}
+            </li>
+          </ul>
+        </div>
+        <div class="content">
+            <div id="inner" *ngFor="let job of jobTitles">
+                <div class="job-info" [hidden]="!job.clicked">
+                    <h2>{{job.position}} <br> {{ job.title }}</h2>
+                    <p>{{ job.description }}</p>
+                </div>
+                <div *ngIf="job.title != 'To be continued...'" class="job-info" [hidden]="!job.clicked">
+                    <h2>Technologies</h2>
+                    <p>{{ job.description }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
