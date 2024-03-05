@@ -1,0 +1,59 @@
+@import 'src/app/app.component.scss';
+@import 'src/styles.scss';
+
+.section-heading::before {
+    content: "03.";
+}
+
+mat-card {
+    background-color: adjust-color($color: $background-color,$lightness: 3%,);
+    max-width: 350px;
+    display: flex;
+    justify-content: space-between;
+
+    mat-card-title {
+        font-size: large;
+        font-weight: 800;
+    }
+
+    mat-card-subtitle {
+        color: $button-secondary-color;
+    }
+
+    mat-card-content {
+        min-height: 180px;
+    }
+
+    mat-card-actions {
+        padding: 0 15px;
+
+        app-icon-button {
+            width: 35px;
+        }
+    }
+
+    p {
+        color: adjust-color($color: $main-text-color, $lightness: -5%,);
+    }
+}
+
+#mat-card-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.border-button {
+    background: none;
+    cursor: pointer;
+    font-family: $primary-font-family;
+    color: $button-secondary-color;
+    max-width: 300px;
+    margin-top: 40px;
+    display: flex;
+    align-self: flex-end;
+    padding: 13px 28px;
+    border: solid $button-secondary-color;
+    border-radius: 7px;
+}

@@ -1,13 +1,24 @@
-@import '../../../../styles.scss';
+@import 'src/styles.scss';
 
-.icon { 
+$filter: invert(99%) sepia(2%) saturate(185%) hue-rotate(37deg) brightness(111%) contrast(76%);
+$hover-filter: invert(74%) sepia(14%) saturate(1752%) hue-rotate(100deg) brightness(113%) contrast(105%); 
+
+.icon{ 
     img {
-        filter: invert(99%) sepia(2%) saturate(185%) hue-rotate(37deg) brightness(111%) contrast(76%);
+        filter: $filter;
     }
 
     &:hover{
         img {
-            filter: invert(74%) sepia(14%) saturate(1752%) hue-rotate(100deg) brightness(113%) contrast(105%);
+            filter: $hover-filter;
         }
+    }
+}
+
+mat-icon {
+    color: $main-text-color;
+
+    &:hover{
+        color: $button-secondary-color;
     }
 }

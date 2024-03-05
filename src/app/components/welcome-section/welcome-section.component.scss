@@ -1,16 +1,7 @@
 @import '../../../styles.scss';
 
 #welcome {
-    @include theme(DarkTheme);
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: auto;
-    min-height: 100vh;
-    display: flex;
     align-items: flex-start;
-    justify-content: center;
-    flex-direction: column;
 }
 
 h4 {

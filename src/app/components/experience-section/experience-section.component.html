@@ -1,4 +1,4 @@
-<section id="experience">
+<section class="section-options" id="experience">
     <h2 class="section-heading">Experience</h2>
     <div class="container">
         <div class="sidebar">
@@ -11,12 +11,11 @@
         <div class="content">
             <div id="inner" *ngFor="let job of jobTitles">
                 <div class="job-info" [hidden]="!job.clicked">
-                    <h2>{{job.position}} <br> {{ job.title }}</h2>
-                    <p>{{ job.description }}</p>
-                </div>
-                <div *ngIf="job.title != 'To be continued...'" class="job-info" [hidden]="!job.clicked">
-                    <h2>Technologies</h2>
-                    <p>{{ job.description }}</p>
+                    <h2>{{job.position}}</h2>
+                    <h4>{{ job.title }}</h4>
+                    <ul>
+                      <li *ngFor="let bullp of job.description" [innerHTML]=" bullp"></li>
+                    </ul>
                 </div>
             </div>
         </div>

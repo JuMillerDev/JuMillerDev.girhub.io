@@ -1,3 +1,8 @@
 <a (mouseenter)="isHovered = true" (mouseleave)="isHovered = false" class="icon" href={{href}}>
-    <img [@sideInformationHovered]="isHovered ? 'hovered' : 'initial'" [attr.width]="width" src={{src}} title={{title}}>
+    <img *ngIf="!matIconName; else buttonMatIcon" [@iconHovered]="isHovered ? 'hovered' : 'initial'" [attr.width]="width" src={{src}} title={{title}}>
+    <ng-template #buttonMatIcon>
+        <mat-icon [@iconHovered]="isHovered ? 'hovered' : 'initial'" title={{title}}>
+            {{matIconName}}
+        </mat-icon>
+    </ng-template>
 </a>

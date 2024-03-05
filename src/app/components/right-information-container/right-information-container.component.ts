@@ -1,6 +1,6 @@
 import { isPlatformBrowser } from '@angular/common';
 import { Component, ElementRef, Inject, PLATFORM_ID, ViewChild } from '@angular/core';
-import { sideContainerInformationHovered } from '../../animations/element-transition';
+import { IconHovered } from '../../animations/element-transition';
 
 @Component({
   selector: 'app-right-information-container',
@@ -8,10 +8,11 @@ import { sideContainerInformationHovered } from '../../animations/element-transi
   imports: [],
   templateUrl: './right-information-container.component.html',
   styleUrl: './right-information-container.component.scss',
-  animations: [sideContainerInformationHovered]
+  animations: [IconHovered]
 })
 export class RightInformationContainerComponent {
   emailAdress = 'yuliiamelnykdev@gmail.com';
+  emailHovered = false
 
   @ViewChild('canvas', { static: true }) canvasRef!: ElementRef;
   @ViewChild('divContainer', {static:true}) containerRef!: ElementRef;
@@ -46,5 +47,9 @@ export class RightInformationContainerComponent {
     this.context!.strokeStyle = '#e1e1e1'; // Line color
     this.context!.lineWidth = this.lineWidth;
     this.context?.stroke();
+  }
+
+  sendEmail(){
+    window.location.href = "mailto:yuliiamelnykdev@gmail.com?subject=Hi Yuliia"
   }
 }

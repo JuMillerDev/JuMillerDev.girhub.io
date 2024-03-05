@@ -1,13 +1,18 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
 @import url('https://fonts.cdnfonts.com/css/sf-mono');
 
 @mixin theme($theme: DarkTheme) {
     background: #151e35;
-    color: #e1e1e1;
+    color: #d7d7d7;
     font-family: 'SF Mono';
 }
 
 $background-color: #151e35;
-$main-text-color: #e1e1e1;
+$main-text-color: #d7d7d7;
 $button-secondary-color: #38ffb3;
 
 $primary-font-family: 'SF Mono';
@@ -24,3 +29,41 @@ body {
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: 'SF Mono', "Helvetica Neue", sans-serif; }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+// -------------------------------------------------------------------------
+
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+mat.$theme-ignore-duplication-warnings: true;
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$JuMillerDev-github-io-primary: mat.define-palette(mat.$indigo-palette,500);
+$JuMillerDev-github-io-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$JuMillerDev-github-io-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$JuMillerDev-github-io-theme: mat.define-light-theme((
+  color: (
+    primary: $JuMillerDev-github-io-primary,
+    accent: $JuMillerDev-github-io-accent,
+    warn: $JuMillerDev-github-io-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($JuMillerDev-github-io-theme);
+// ------------------------------------------------------------------------------------------------

@@ -1,8 +1,6 @@
-import { AfterViewInit, Component, NgZone, OnDestroy, OnInit, Output,EventEmitter, HostListener } from '@angular/core';
+import { Component, Output,EventEmitter, HostListener } from '@angular/core';
 import { NavbarComponent } from "../navbar/navbar.component";
 import {MatDividerModule} from '@angular/material/divider'
-import { Subject, Subscription, interval, take, takeUntil } from 'rxjs';
-import { error } from 'console';
 
 @Component({
     selector: 'app-welcome-section',
@@ -21,6 +19,7 @@ export class WelcomeSectionComponent{
         if (aboutSection && !this.isAboutLoaded) {
           const rect = aboutSection.getBoundingClientRect();
           const isInView = rect.top <= window.innerHeight && rect.bottom >= 0;
+          console.log(isInView)
           this.aboutInView.emit(isInView);
           
           if(isInView == true)

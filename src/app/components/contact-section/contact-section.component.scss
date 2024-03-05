@@ -1,0 +1,50 @@
+@import 'src/app/app.component.scss';
+
+#contact {
+    position: relative;
+}
+
+.section-heading::before {
+    content: "04.";
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .big-heading {
+        margin-top: 30px;
+        font-size: clamp(30px, 8vw, 50px);
+        line-height: calc(clamp(30px, 8vw, 50px) * 1);
+    }
+
+    small {
+        color: $button-secondary-color;
+    }
+
+    p {
+        max-width: 40vw;
+        text-align: center;
+        height: 15vh;
+        opacity: 0.9;
+    }
+
+    .border-button {
+        background: none;
+        cursor: pointer;
+        font-family: $primary-font-family;
+        color: $button-secondary-color;
+        padding: 14px 28px;
+        border: solid $button-secondary-color;
+        border-radius: 7px;
+    }
+
+    .footer{
+        position: absolute;
+        font-size:x-small;
+        bottom: 5px;
+        opacity: 0.4;
+    }
+}
+

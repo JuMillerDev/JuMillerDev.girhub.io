@@ -1,22 +1,14 @@
 @import 'src/app/app.component.scss';
 
-#about {
-    @include theme(DarkTheme);
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: auto;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
 .wrapper {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+p {
+    color: adjust-color($color: $main-text-color, $lightness: -8%,);
 }
 
 .section-heading::before {
@@ -32,7 +24,7 @@
 }
 
 #portrait-container {
-    width: 40%;
+    width: 43%;
     display: flex;
     align-items: center;
     justify-content: center;

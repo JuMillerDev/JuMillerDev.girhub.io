@@ -25,11 +25,11 @@ export class AppComponent {
   private isScrolledUp: boolean = false;
   isNotOnTopOfPage: boolean = false;
 
-  viewsToLoad = {
+  viewsToLoad: {[key:string]: boolean} = {
     aboutInView: false, 
     experienceInView: false,
     projectsInView: false,
-    constactInView: false,
+    contactInView: false,
   }
 
   @HostListener('window:scroll',[])
@@ -40,8 +40,8 @@ export class AppComponent {
     this.previousScrollPosition = window.scrollY;
   }
 
-  onAboutInView(isInView: boolean){
-    console.log(isInView)
-    this.viewsToLoad.aboutInView = isInView;
+  onSectionInView(viewName: string,isInView: boolean){
+    console.log('viewName: ',viewName, 'bool: ', isInView)
+    this.viewsToLoad[viewName] = isInView;
   }
 }

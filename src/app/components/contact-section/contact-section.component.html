@@ -1,1 +1,12 @@
-<p>contact-section works!</p>
+<section class="section-options" id="contact">
+    
+    <div class="main-container">
+        <small>What's next?</small>
+        <h1 class="big-heading">Get in touch!</h1>
+        <p>I am currently looking for a job so my mailbox is always open for your questions or offers. Don't be shy to say hi! I will try my best to answer you as fast as I can.</p>
+        <button [@buttonHoverAnimation]="buttonHovered ? 'hovered' : 'initial'" (mouseenter)="buttonHovered = true" (mouseleave)="buttonHovered = false"  class="border-button" (click)="sendEmail()">Say hello!</button>
+        <div class="footer">
+            <i>Designed & built by Yuliia Melnyk</i>
+        </div>
+    </div>
+</section>

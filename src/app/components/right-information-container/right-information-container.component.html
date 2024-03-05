@@ -1,5 +1,5 @@
 <div id="content" #divContainer>
-    <p>{{emailAdress}}</p>
+    <p [@iconHovered]="emailHovered ? 'hoveredR90' : 'initial'" (mouseenter)="emailHovered = true" (mouseleave)="emailHovered = false" (click)="sendEmail()">{{emailAdress}}</p>
     <canvas #canvas width="300" height="500"></canvas>
 </div>
 

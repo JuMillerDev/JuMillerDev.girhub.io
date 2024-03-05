@@ -1,16 +1,4 @@
-@import './../../app.component.scss';
-
-#experience {
-    @include theme(DarkTheme);
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: auto;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
+@import 'src/app/app.component.scss';
 
 .section-heading::before {
     content: "02.";
@@ -19,6 +7,7 @@
 .container {
     display: flex;
     min-width: 100%;
+    min-height: 63vh;
     flex-direction: row;
 
     .sidebar {
@@ -48,9 +37,7 @@
                 opacity: 0.25;
             }
         
-            &.clicked {
-                
-        
+            &.clicked { 
                 &::before{
                     background-color: $button-secondary-color;
                     opacity: 1;
@@ -61,14 +48,39 @@
 
     .content {
         width: 70%;
+
+        h2 {
+            margin: 0;
+        }
+
+        h4 {
+            font-weight: 400;
+            margin-top: 0;
+            color: $button-secondary-color;
+        }
+
+        ul {
+            padding: 0;
+            list-style-position: inside;
+
+            li{
+                color: adjust-color($color: $main-text-color,$lightness: -8%);
+
+                & + li {
+                    margin-top: 10px;  
+                }
+
+                &::marker{
+                    content: "▷";
+                    color: $button-secondary-color;
+                }
+            }
+        }
+
         #inner {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-        }
-
-        .job-info {
-            width: 50%;
         }
     }
 }
