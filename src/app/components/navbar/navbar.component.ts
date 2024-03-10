@@ -24,7 +24,7 @@ export class NavbarComponent {
   }
 
   openResumePdf(){
-    const pdfUrl = '../../../assets/NIT_Patna_Resume (1).pdf';
+    const pdfUrl = '../../../assets/Yuliia_Melnyk_Resume.pdf';
 
     window.open(pdfUrl, '_blank');
   }
