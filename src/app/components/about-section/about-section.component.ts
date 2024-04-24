@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter, HostListener } from '@angular/core';
+import { Component, Output, EventEmitter, HostListener, AfterViewInit } from '@angular/core';
 import { MatDividerModule } from '@angular/material/divider';
 
 @Component({
@@ -8,17 +8,20 @@ import { MatDividerModule } from '@angular/material/divider';
   templateUrl: './about-section.component.html',
   styleUrl: './about-section.component.scss'
 })
-export class AboutSectionComponent {
+export class AboutSectionComponent implements AfterViewInit {
   @Output() experienceInView: EventEmitter<boolean> = new EventEmitter<boolean>();
   private isExperienceLoaded: boolean = false;
+
+  ngAfterViewInit(): void {
+    if(typeof document !== "undefined") this.onWindowScroll();
+  }
 
   @HostListener('window:scroll',[])
     onWindowScroll() {
         const experienceSection = document.getElementById('experience');
         if (experienceSection && !this.isExperienceLoaded) {
           const rect = experienceSection.getBoundingClientRect();
-          const isInView = rect.top <= window.innerHeight && rect.bottom >= 0;
-          console.log(isInView)
+          const isInView = rect.top <= window.innerHeight;
           this.experienceInView.emit(isInView);
           
           if(isInView == true)

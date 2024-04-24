@@ -1,4 +1,4 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { NavbarComponent } from "./components/navbar/navbar.component";
@@ -19,17 +19,25 @@ import { ContactSectionComponent } from "./components/contact-section/contact-se
     animations: [slideFromTop, slideFromBottom],
     imports: [CommonModule, RouterOutlet, NavbarComponent, WelcomeSectionComponent, AboutSectionComponent, LeftInformationContainerComponent, RightInformationContainerComponent, ExperienceSectionComponent, ProjectsSectionComponent, ContactSectionComponent]
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   showFloatingNavbar: boolean = true
   private previousScrollPosition: number = 0;
   private isScrolledUp: boolean = false;
   isNotOnTopOfPage: boolean = false;
+  isMobileLayout: boolean = true;
 
   viewsToLoad: {[key:string]: boolean} = {
     aboutInView: false, 
     experienceInView: false,
     projectsInView: false,
     contactInView: false,
+  }
+
+  ngOnInit(): void {
+    if(typeof window !== "undefined") {
+      this.isMobileLayout = window.innerWidth <= 767;
+      window.onresize = () => this.isMobileLayout = window.innerWidth <= 767; 
+    }
   }
 
   @HostListener('window:scroll',[])
@@ -41,7 +49,7 @@ export class AppComponent {
   }
 
   onSectionInView(viewName: string,isInView: boolean){
-    console.log('viewName: ',viewName, 'bool: ', isInView)
+    // console.log('viewName: ',viewName, 'bool: ', isInView)
     this.viewsToLoad[viewName] = isInView;
   }
 }

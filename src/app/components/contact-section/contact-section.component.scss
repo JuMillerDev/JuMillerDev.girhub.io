@@ -16,7 +16,7 @@
     .big-heading {
         margin-top: 30px;
         font-size: clamp(30px, 8vw, 50px);
-        line-height: calc(clamp(30px, 8vw, 50px) * 1);
+        line-height: calc(clamp(30px, 8vw, 50px) + 5vh);
     }
 
     small {
@@ -26,7 +26,7 @@
     p {
         max-width: 40vw;
         text-align: center;
-        height: 15vh;
+        // height: 15vh;
         opacity: 0.9;
     }
 
@@ -36,6 +36,7 @@
         font-family: $primary-font-family;
         color: $button-secondary-color;
         padding: 14px 28px;
+        margin-top: 3vh;
         border: solid $button-secondary-color;
         border-radius: 7px;
     }

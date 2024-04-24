@@ -1,5 +1,13 @@
-<div id="content" #divContainer>
-    <p [@iconHovered]="emailHovered ? 'hoveredR90' : 'initial'" (mouseenter)="emailHovered = true" (mouseleave)="emailHovered = false" (click)="sendEmail()">{{emailAdress}}</p>
-    <canvas #canvas width="300" height="500"></canvas>
+<div
+  class="fixed flex flex-col items-center gap-5 justify-end bottom-0 right-11"
+>
+  <p
+    [@buttonHovered]="emailHovered ? 'hovered' : 'initial'"
+    (mouseenter)="emailHovered = true"
+    (mouseleave)="emailHovered = false"
+    (click)="sendEmail()"
+    class="cursor-pointer flex flex-row items-center font-medium"
+  >
+    {{ emailAdress }}
+  </p>
 </div>
-

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { buttonHoverAnimation } from 'src/app/animations/element-transition';
+import { borderButtonHoverAnimation } from 'src/app/animations/element-transition';
 
 @Component({
   selector: 'app-contact-section',
@@ -7,7 +7,7 @@ import { buttonHoverAnimation } from 'src/app/animations/element-transition';
   imports: [],
   templateUrl: './contact-section.component.html',
   styleUrl: './contact-section.component.scss',
-  animations: [buttonHoverAnimation]
+  animations: [borderButtonHoverAnimation]
 })
 export class ContactSectionComponent {
   buttonHovered: boolean = false;

@@ -2,6 +2,12 @@
 
 #welcome {
     align-items: flex-start;
+    margin-bottom: 3.5rem;
+    @media screen and (min-width: 552px){
+        min-height: calc(100vh - 112px);
+        margin-bottom: 0;
+    }
+
 }
 
 h4 {
@@ -44,6 +50,8 @@ p {
 }
 
 .big-heading {
-    font-size: clamp(40px, 8vw, 70px);
-    line-height: calc(clamp(40px, 8vw, 70px) * 1);
+    font-size: clamp(40px, 7vw, 50px);
+    @media screen and (max-width:552px) {
+        font-size: clamp(30px, 7vw, 50px);
+    }
 }

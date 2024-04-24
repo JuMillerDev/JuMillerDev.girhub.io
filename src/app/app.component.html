@@ -1,16 +1,48 @@
+<app-navbar
+  class="fixed top-0 z-50 w-full"
+  *ngIf="showFloatingNavbar"
+  [class.shadow]="isNotOnTopOfPage || isMobileLayout"
+  [isMobileNavbar]="isMobileLayout"
+  [showFloatingNavbar]="showFloatingNavbar"
+  @slideFromTop
+></app-navbar>
 
-<app-navbar *ngIf="showFloatingNavbar" [class.shadow]="isNotOnTopOfPage" @slideFromTop></app-navbar>
+<div class="flex flex-row">
+  <ng-template [ngIf]="!isMobileLayout">
+    <app-left-information-container
+      class="fixed left-0 bottom-0 h-full w-16"
+    ></app-left-information-container>
+  </ng-template>
 
+  <div
+    class="flex flex-col self-center flex-1 px-4 md:px-36 lg:px-44 max-w-[2000px]"
+  >
+    <app-welcome-section
+      class="mt-28"
+      (aboutInView)="onSectionInView('aboutInView', $event)"
+    ></app-welcome-section>
+    <app-about-section
+      class="mb-14"
+      (experienceInView)="onSectionInView('experienceInView', $event)"
+      [@slideFromBottom]="viewsToLoad['aboutInView']"
+    ></app-about-section>
+    <app-experience-section
+      class="mb-14"
+      (projectsInView)="onSectionInView('projectsInView', $event)"
+      [@slideFromBottom]="viewsToLoad['experienceInView']"
+    ></app-experience-section>
+    <app-projects-section
+      (contactInView)="onSectionInView('contactInView', $event)"
+      [@slideFromBottom]="viewsToLoad['projectsInView']"
+    ></app-projects-section>
+    <app-contact-section
+      [@slideFromBottom]="viewsToLoad['contactInView']"
+    ></app-contact-section>
+  </div>
 
-<div id="wrapper">
-   <app-left-information-container></app-left-information-container>
-   <div id="main-scrolling-body">
-    <app-welcome-section (aboutInView)="onSectionInView('aboutInView',$event)"></app-welcome-section>
-    <app-about-section (experienceInView)="onSectionInView('experienceInView',$event)" [@slideFromBottom]="viewsToLoad['aboutInView']"></app-about-section>
-    <app-experience-section (projectsInView)="onSectionInView('projectsInView',$event)" [@slideFromBottom]="viewsToLoad['experienceInView']"></app-experience-section>
-    <app-projects-section (contactInView)="onSectionInView('contactInView', $event)" [@slideFromBottom]="viewsToLoad['projectsInView']"></app-projects-section>
-    <app-contact-section [@slideFromBottom]="viewsToLoad['contactInView']"></app-contact-section>
-   </div>
-   <app-right-information-container></app-right-information-container>
+  <ng-template [ngIf]="!isMobileLayout">
+    <app-right-information-container
+      class="fixed right-0 bottom-0 h-full w-16"
+    ></app-right-information-container>
+  </ng-template>
 </div>
-

@@ -1,23 +1,17 @@
 @import '../../../styles.scss';
 
 p {
-    transform: rotate(90deg);
+    writing-mode: vertical-lr;
     color: $button-secondary-color;
-    cursor: pointer;
 }
 
-canvas {
-    padding-top: 10vh;
+div::after{
+    content: "";
+    display: block;
+    position: relative;
+    background-color: $main-text-color;
+    height: 25vh;
+    width: 2px;
 }
 
-#content{
-    @include theme(DarkTheme);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#spacer{
-    min-height: 60vh;
-}
 

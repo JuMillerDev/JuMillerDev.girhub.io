@@ -1,15 +1,10 @@
-#content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
+@import '../../../styles.scss';
 
-canvas {
-    position: fixed;
-    bottom: 0;
-}
-
-app-icon-button {
-    margin-top: 20px;
+div::after{
+    content: "";
+    display: block;
+    position: relative;
+    background-color: $main-text-color;
+    height: 32vh;
+    width: 2px;
 }

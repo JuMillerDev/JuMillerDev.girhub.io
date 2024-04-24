@@ -1,23 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { buttonHoverAnimation } from '../../animations/element-transition';
+import { borderButtonHoverAnimation, menuOpenClose } from '../../animations/element-transition';
+import { CommonModule } from '@angular/common';
+import { MatIconButton } from '@angular/material/button';
+import { MatIcon } from '@angular/material/icon';
+import { MatDivider, MatDividerModule } from '@angular/material/divider';
+import { IconButtonComponent } from "../left-information-container/icon-button/icon-button.component";
 
 @Component({
-  selector: 'app-navbar',
-  standalone: true,
-  imports: [],
-  templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss',
-  animations: [buttonHoverAnimation]
+    selector: 'app-navbar',
+    standalone: true,
+    templateUrl: './navbar.component.html',
+    styleUrl: './navbar.component.scss',
+    animations: [borderButtonHoverAnimation, menuOpenClose],
+    imports: [CommonModule, MatIconButton, MatIcon, MatDividerModule, IconButtonComponent]
 })
 export class NavbarComponent {
 
   buttonHovered: boolean = false;
+  mobileMenuOpen: boolean = false;
+  @Input() isMobileNavbar: boolean = true;
+  @Input() showFloatingNavbar: boolean = false;
 
   scrollToAnotherSection(id: string){
-    console.log(id)
     const element = document.getElementById(id)
-    console.log('element:',element)
     if(element){
       element.scrollIntoView({behavior:'smooth'})
     }

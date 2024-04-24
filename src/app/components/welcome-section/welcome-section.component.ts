@@ -1,4 +1,4 @@
-import { Component, Output,EventEmitter, HostListener } from '@angular/core';
+import { Component, Output,EventEmitter, HostListener, OnInit, AfterViewInit } from '@angular/core';
 import { NavbarComponent } from "../navbar/navbar.component";
 import {MatDividerModule} from '@angular/material/divider'
 
@@ -9,17 +9,20 @@ import {MatDividerModule} from '@angular/material/divider'
     styleUrl: './welcome-section.component.scss',
     imports: [NavbarComponent,MatDividerModule]
 })
-export class WelcomeSectionComponent{
+export class WelcomeSectionComponent implements AfterViewInit{
     @Output() aboutInView:EventEmitter<boolean> = new EventEmitter<boolean>();
     private isAboutLoaded: boolean = false;
+
+    ngAfterViewInit(): void {
+       if(typeof document !== "undefined") this.onWindowScroll();
+    }
 
     @HostListener('window:scroll',[])
     onWindowScroll() {
         const aboutSection = document.getElementById('about');
         if (aboutSection && !this.isAboutLoaded) {
           const rect = aboutSection.getBoundingClientRect();
-          const isInView = rect.top <= window.innerHeight && rect.bottom >= 0;
-          console.log(isInView)
+          const isInView = rect.top <= window.innerHeight;
           this.aboutInView.emit(isInView);
           
           if(isInView == true)

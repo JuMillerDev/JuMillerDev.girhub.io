@@ -1,9 +1,9 @@
-import { Component, EventEmitter, HostListener, Output } from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, HostListener, Output } from '@angular/core';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatIconModule} from '@angular/material/icon';
 import { IconButtonComponent } from '../left-information-container/icon-button/icon-button.component';
-import { buttonHoverAnimation } from 'src/app/animations/element-transition';
+import { borderButtonHoverAnimation } from 'src/app/animations/element-transition';
 
 @Component({
   selector: 'app-projects-section',
@@ -11,20 +11,23 @@ import { buttonHoverAnimation } from 'src/app/animations/element-transition';
   imports: [MatCardModule, MatButtonModule, MatIconModule, IconButtonComponent],
   templateUrl: './projects-section.component.html',
   styleUrl: './projects-section.component.scss',
-  animations: [buttonHoverAnimation]
+  animations: [borderButtonHoverAnimation]
 })
-export class ProjectsSectionComponent {
+export class ProjectsSectionComponent implements AfterViewInit{
   buttonHovered: boolean = false;
   @Output() contactInView:EventEmitter<boolean> = new EventEmitter<boolean>();
   private isContactLoaded: boolean = false;
+
+  ngAfterViewInit(): void {
+    if(typeof document !== "undefined") this.onWindowScroll();
+  }
 
   @HostListener('window:scroll',[])
   onWindowScroll() {
     const contactSection = document.getElementById('contact');
     if (contactSection && !this.isContactLoaded) {
       const rect = contactSection.getBoundingClientRect();
-      const isInView = rect.top <= window.innerHeight && rect.bottom >= 0;
-      console.log(isInView)
+      const isInView = rect.top <= window.innerHeight;
       this.contactInView.emit(isInView);
       
       if(isInView == true)

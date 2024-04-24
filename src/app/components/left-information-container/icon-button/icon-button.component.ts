@@ -1,5 +1,5 @@
 import { Component, Input, SimpleChange, SimpleChanges } from '@angular/core';
-import { IconHovered } from '../../../animations/element-transition';
+import { buttonHovered } from '../../../animations/element-transition';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
@@ -10,7 +10,7 @@ import { MatButtonModule } from '@angular/material/button';
   imports: [CommonModule, MatButtonModule, MatIconModule],
   templateUrl: './icon-button.component.html',
   styleUrl: './icon-button.component.scss',
-  animations: [IconHovered]
+  animations: [buttonHovered]
 })
 export class IconButtonComponent {
   @Input() src!: string

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, EventEmitter, HostListener, Output, ViewEncapsulation } from '@angular/core';
+import { AfterViewInit, Component, EventEmitter, HostListener, Output, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-experience-section',
@@ -9,7 +9,7 @@ import { Component, EventEmitter, HostListener, Output, ViewEncapsulation } from
   styleUrl: './experience-section.component.scss',
   encapsulation: ViewEncapsulation.None
 })
-export class ExperienceSectionComponent {
+export class ExperienceSectionComponent implements AfterViewInit {
   @Output() projectsInView:EventEmitter<boolean> = new EventEmitter<boolean>();
   private isProjectsLoaded: boolean = false;
   jobTitles = [
@@ -41,13 +41,16 @@ export class ExperienceSectionComponent {
     });
   }
 
+  ngAfterViewInit(): void {
+    if(typeof document !== "undefined") this.onWindowScroll();
+  }
+
   @HostListener('window:scroll',[])
   onWindowScroll() {
     const projectsSection = document.getElementById('projects');
     if (projectsSection && !this.isProjectsLoaded) {
       const rect = projectsSection.getBoundingClientRect();
-      const isInView = rect.top <= window.innerHeight && rect.bottom >= 0;
-      console.log(isInView)
+      const isInView = rect.top <= window.innerHeight;
       this.projectsInView.emit(isInView);
       
       if(isInView == true)

@@ -18,7 +18,7 @@ export const slideFromBottom = trigger('slideFromBottom', [
     ])
 ])
 
-export const buttonHoverAnimation = trigger('buttonHoverAnimation', [
+export const borderButtonHoverAnimation = trigger('borderButtonHoverAnimation', [
     state('hovered', style({
         transform:'translate(-3px,-3px)', 
         boxShadow:'3px 3px #38ffb3'
@@ -31,7 +31,7 @@ export const buttonHoverAnimation = trigger('buttonHoverAnimation', [
     ])
 ])
 
-export const IconHovered = trigger('iconHovered',[
+export const buttonHovered = trigger('buttonHovered',[
     state('hovered', style({
         transform: 'translateY(-3px)'
     })),
@@ -51,4 +51,16 @@ export const IconHovered = trigger('iconHovered',[
     transition('hoveredR90 => initial', [
         animate('100ms')
     ])
+])
+
+export const menuOpenClose = trigger('openClose', [
+    transition(':enter', [
+        style({transform: 'translateY(-100vh)',height: '0px'}),
+        animate('200ms', style({transform: 'translateY(0)', height: 'fit-content'}))
+    ]),
+
+    transition(':leave', [
+        style({transform: 'translateY(0)', height: 'fit-content'}),
+        animate('100ms', style({transform: 'translateY(-100vh)',height: '0px'})),
+    ]),
 ])
