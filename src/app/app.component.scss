@@ -16,7 +16,7 @@ strong {
     @include theme(DarkTheme);
     margin: 0;
     padding: 0;
-    width: 100%;
+    width: auto;
     height: auto;
     min-height: 100vh;
     display: flex;

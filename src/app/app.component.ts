@@ -44,7 +44,7 @@ export class AppComponent implements OnInit {
   onWindowScroll(){
     this.isNotOnTopOfPage = window.scrollY > 0;
     this.isScrolledUp = window.scrollY <= this.previousScrollPosition;
-    this.showFloatingNavbar = this.isScrolledUp
+    this.showFloatingNavbar = this.isScrolledUp || !this.isNotOnTopOfPage;
     this.previousScrollPosition = window.scrollY;
   }
 

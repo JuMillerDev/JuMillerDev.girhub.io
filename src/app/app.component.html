@@ -15,10 +15,10 @@
   </ng-template>
 
   <div
-    class="flex flex-col self-center flex-1 px-4 md:px-36 lg:px-44 max-w-[2000px]"
+    class="flex flex-col max-w-[100vw] self-center flex-1 px-4 md:px-36 lg:px-44 lg:max-w-[2000px]"
   >
     <app-welcome-section
-      class="mt-28"
+      class="mt-[120px] min-[552px]:mt-0"
       (aboutInView)="onSectionInView('aboutInView', $event)"
     ></app-welcome-section>
     <app-about-section
