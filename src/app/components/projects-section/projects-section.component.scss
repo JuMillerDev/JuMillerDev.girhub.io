@@ -7,9 +7,15 @@
 
 mat-card {
     background-color: adjust-color($color: $background-color,$lightness: 3%,);
-    max-width: 350px;
     display: flex;
+    min-width: 100%;
     justify-content: space-between;
+    margin-bottom: 15px;
+
+    @media screen and (min-width:995px) {
+        min-width: 100px;
+        max-width: 350px;
+    }
 
     mat-card-title {
         font-size: large;
@@ -42,6 +48,17 @@ mat-card {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    @media screen and (max-width:995px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    @media screen and (min-width:995px) and (max-width:1200px) {
+        justify-content: flex-start;
+        gap: 20px;
+    }
 }
 
 .border-button {
@@ -56,4 +73,8 @@ mat-card {
     padding: 13px 28px;
     border: solid $button-secondary-color;
     border-radius: 7px;
+
+    @media screen and (max-width:760px) {
+        align-self: center;
+    }
 }

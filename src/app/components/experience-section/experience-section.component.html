@@ -1,24 +1,28 @@
 <section class="section-options" id="experience">
-    <h2 class="section-heading">Experience</h2>
-    <div class="container">
-        <div class="sidebar">
+  <h2 class="section-heading">Experience</h2>
+  <div class="flex min-w-full flex-col min-h-[63vh] md:flex-row">
+    <div class="sidebar">
+      <ul>
+        <li
+          class="job-title"
+          *ngFor="let job of jobTitles"
+          (click)="toggleJobInfo(job)"
+          [class.clicked]="job.clicked"
+        >
+          {{ job.title }}
+        </li>
+      </ul>
+    </div>
+    <div class="content">
+      <div id="inner" *ngFor="let job of jobTitles">
+        <div class="job-info" [hidden]="!job.clicked">
+          <h2>{{ job.position }}</h2>
+          <h4>{{ job.title }}</h4>
           <ul>
-            <li class="job-title" *ngFor="let job of jobTitles" (click)="toggleJobInfo(job)" [class.clicked]="job.clicked">
-              {{ job.title }}
-            </li>
+            <li *ngFor="let bullp of job.description" [innerHTML]="bullp"></li>
           </ul>
         </div>
-        <div class="content">
-            <div id="inner" *ngFor="let job of jobTitles">
-                <div class="job-info" [hidden]="!job.clicked">
-                    <h2>{{job.position}}</h2>
-                    <h4>{{ job.title }}</h4>
-                    <ul>
-                      <li *ngFor="let bullp of job.description" [innerHTML]=" bullp"></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
-
+  </div>
 </section>

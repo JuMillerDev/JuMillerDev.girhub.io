@@ -4,7 +4,8 @@
     align-items: flex-start;
     margin-bottom: 3.5rem;
     @media screen and (min-width: 552px){
-        min-height: calc(100vh - 112px);
+        min-height: calc(100vh - 110px);
+        // min-height: 80vh;
         margin-bottom: 0;
     }
 
@@ -50,8 +51,11 @@ p {
 }
 
 .big-heading {
-    font-size: clamp(40px, 7vw, 50px);
-    @media screen and (max-width:552px) {
+    font-size: clamp(55px, 8vw, 65px);
+    @media screen and (max-width:760px) {
         font-size: clamp(30px, 7vw, 50px);
+    }
+    @media screen and (min-width:760px) and (max-width: 1150px) {
+        font-size: clamp(30px, 6vw, 40px);
     }
 }
